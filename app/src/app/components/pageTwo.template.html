@@ -1,0 +1,24 @@
+<div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true"><mat-card *ngFor="let item of page.result;">
+    <mat-card-content>
+      <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+        <div>
+          <img src="http://localhost:8081/api/get-file/{{item.file.filename}}" crossorigin="anonymous" width="200px" height="200px" alt="uploadedImage">
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <h3>
+            {{item.title}}
+          </h3>
+          <p>
+            {{item.description}}
+          </p>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="end stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon matTooltip="Delete item">delete</mat-icon></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><mat-icon matTooltip="Edit item">edit</mat-icon></div>
+      </div>
+    </mat-card-content>
+  </mat-card></div>
+<div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button color="primary" (click)="goBack()">Go Back</button></div>

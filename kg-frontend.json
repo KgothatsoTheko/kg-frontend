@@ -1,0 +1,13 @@
+{
+    "displayName": "kg-frontend",
+    "appName": "kg-frontend",
+    "description": "UI of evalution",
+    "lastModified": "2024-08-08T08:25:16.610Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2024-08-08T08:25:16.301Z",
+    "analyticsId": "044bac73-fad0-418d-9c64-343346f4a92e",
+    "createdStudioVersion": "9.2.1"
+}

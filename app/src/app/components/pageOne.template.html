@@ -1,0 +1,43 @@
+<div fxLayout="column wrap" class="full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <h3>
+        Add Items</h3>
+    </div>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <form [formGroup]="page.sendForm">
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+        <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Title" [required]="true" formControlName="title" maxLength="25" minLength="18">
+          <mat-error align="start" *ngIf="page.sendForm.controls.title?.errors?.required">Title is <strong>required</strong></mat-error><mat-error align="start" *ngIf="page.sendForm.controls.title?.errors?.[&apos;minlength&apos;]">Title must be at least 18 characters long</mat-error><mat-error align="start" *ngIf="page.sendForm.controls.title?.errors?.[&apos;maxlength&apos;]">Title can be max 25 characters long</mat-error>
+        </mat-form-field><mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;never&apos;">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" maxLength="80" minLength="20" placeholder="Description" [required]="true"></textarea>
+        </mat-form-field><span *ngIf="page.sendForm.controls.description?.errors?.required &amp;&amp; page.sendForm.controls.description?.touched" class="red">
+                Description is <strong>required</strong></span><span *ngIf="page.sendForm.controls.description?.errors?.[&apos;minlength&apos;]" class="red">
+                Description must be at least 20 characters long</span><span *ngIf="page.sendForm.controls.description?.errors?.[&apos;maxlength&apos;]" class="red">
+                Description can be max 80 characters long</span>
+      </div>
+      <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div (click)="upload()">
+            <input type="file" id="upload">
+          </div>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            <img *ngIf="page.image" [src]="page.image" crossorigin="anonymous" width="200px" height="200px" alt="uploadedImage">
+          </div>
+        </div>
+      </div>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button color="warn" (click)="cancel()">Cancel</button></div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button color="primary" (click)="submit()" [disabled]="page.sendForm.invalid || !page.image">Submit</button></div>
+      </div>
+    </form>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button color="accent" (click)="sd_OAjwCoY4iw4xnq9q()">View All</button></div>
+  </div>
+</div>

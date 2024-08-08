@@ -1,0 +1,22 @@
+{
+    "routes": [
+        {
+            "path": "page-one",
+            "component": "pageOneComponent"
+        },
+        {
+            "path": "page-two",
+            "component": "pageTwoComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "page-one",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}
